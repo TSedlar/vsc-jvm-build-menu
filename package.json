@@ -1,58 +1,71 @@
 {
-    "name": "vsc-pom-install-menu",
-    "displayName": "POM Install Menu",
-    "description": "Right click a POM for an install menu",
-    "version": "1.0.0",
-    "license": "MIT",
-    "icon": "images/icon-128.png",
-    "dependencies": {
-        "typescript": "^2.5.2",
-        "vscode": "^1.1.5"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/tsedlar/vsc-pom-install-menu"
-    },
-    "private": false,
-    "bugs": {
-        "email": "sedlarizona@gmail.com",
-        "url": "https://github.com/tsedlar/vsc-pom-install-menu/issues"
-    },
-    "publisher": "sedarity",
-    "engines": {
-        "vscode": "^1.12.0"
-    },
-    "categories": [
-        "Other"
+  "name": "vsc-jvm-build-menu",
+  "displayName": "JVM Build Menu",
+  "description": "A menu for JVM build tool interactions and classpath updating",
+  "version": "1.0.0",
+  "license": "MIT",
+  "icon": "images/icon-128.png",
+  "dependencies": {
+    "readdirp": "^2.1.0",
+    "typescript": "^2.5.2",
+    "vscode": "^1.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsedlar/vsc-jvm-build-menu"
+  },
+  "private": false,
+  "bugs": {
+    "email": "sedlarizona@gmail.com",
+    "url": "https://github.com/tsedlar/vsc-jvm-build-menu/issues"
+  },
+  "publisher": "sedarity",
+  "engines": {
+    "vscode": "^1.12.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.installPOM",
+    "onCommand:extension.updateClassPathMVN"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.installPOM",
+        "title": "Install POM"
+      },
+      {
+        "command": "extension.updateClassPathMVN",
+        "title": "Update Classpath (Maven)"
+      }
     ],
-    "activationEvents": [
-        "onCommand:extension.installPOM"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.installPOM",
-                "title": "Install POM"
-            }
-        ],
-        "menus": {
-            "explorer/context": [{
-                "when": "resourceLangId == xml",
-                "command": "extension.installPOM",
-                "group": "PomInstall@1"
-            }]
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceLangId == xml",
+          "command": "extension.installPOM",
+          "group": "PomInstall@1"
+        },
+        {
+          "when": "resourceLangId == json",
+          "command": "extension.updateClassPathMVN",
+          "group": "ClassPathUpdate@1"
         }
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.5.2",
-        "vscode": "^1.1.5",
-        "@types/node": "^8.0.26"
+      ]
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.5.2",
+    "vscode": "^1.1.5",
+    "@types/node": "^8.0.26"
+  }
 }
