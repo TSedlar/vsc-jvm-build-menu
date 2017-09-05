@@ -11,3 +11,6 @@
 
 # 1.1.2
 - Fix issue with modules not appearing as an array.
+
+# 1.2.0
+- Added sample gif to README and bumped version number.

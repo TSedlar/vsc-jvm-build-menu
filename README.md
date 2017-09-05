@@ -5,6 +5,10 @@ and more accurate linting.
 
 This project is best used with [vscode-javac](https://github.com/georgewfraser/vscode-javac) and [javaVSCode](https://github.com/DonJayamanne/javaVSCode)
 
+## Sample
+
+![Preview](./images/sample.gif)
+
 ## Using
 
 * Create a project by right clicking on the tree and creating a
