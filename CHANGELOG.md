@@ -5,3 +5,6 @@
 - Maven root module creation
 - Maven submodule creation
 - VSC launch configuration file creation
+
+# 1.1.1
+- Fix README image
