@@ -8,3 +8,6 @@
 
 # 1.1.1
 - Fix README image
+
+# 1.1.2
+- Fix issue with modules not appearing as an array.

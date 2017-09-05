@@ -109,6 +109,10 @@ let createPOM = (rootDir, isRoot) => {
                 parent.project['modules'] = { module: [] };
               }
 
+              if (!(parent.project['modules']['module'] instanceof Array)) {
+                parent.project['modules']['module'] = [parent.project['modules']['module']]
+              }
+              
               parent.project['modules']['module'].push({ _text: projId });
 
               fs.writeFileSync(`${rootDir}/pom.xml`, converter.js2xml(

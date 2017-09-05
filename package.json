@@ -2,7 +2,7 @@
   "name": "vsc-jvm-build-menu",
   "displayName": "JVM Build Menu",
   "description": "A menu for JVM build tool interactions and classpath updating",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "icon": "images/icon-128.png",
   "dependencies": {
