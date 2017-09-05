@@ -3,7 +3,7 @@
 This project aims towards simplifying building modules within VSCode which allows for simpler
 and more accurate linting.
 
-This project is best used with [vscode-javac](https://github.com/georgewfraser/vscode-javac) and [javaVSCode](https://github.com/DonJayamanne/javaVSCode)
+This project is best used with [vscode-javac](https://github.com/georgewfraser/vscode-javac), [javaVSCode](https://github.com/DonJayamanne/javaVSCode), and [vscode-Java-Imports](https://github.com/tushortz/vscode-Java-Imports)
 
 ## Sample
 

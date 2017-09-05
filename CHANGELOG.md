@@ -14,3 +14,6 @@
 
 # 1.2.0
 - Added sample gif to README and bumped version number.
+
+# 1.2.1
+- Added another suggestion package
